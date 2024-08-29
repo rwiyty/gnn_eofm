@@ -93,7 +93,6 @@ Yuyang Wang yw3158@rit.edu or Michael Zuzak mjzeec@rit.edu | Department of Compu
 Tool utilized to produce ground truth and certain features (credit to Thomas Wojtal):
 ```
 git@kgcoe-git.rit.edu:zuzak_lab/adjoining-gate.git
-
 ```
 
 Additional relavent toolkits and citations
