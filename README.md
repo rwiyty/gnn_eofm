@@ -72,7 +72,7 @@ There are several programs in this repository. Below is a quick description of e
 5. `process_log` extract relavent information and display figures from the output log from `demo_model_usage.py` for further analysis. 
 6. A demo of the model with CLI can be used as follows:
 ```
-git clone git@kgcoe-git.rit.edu:zuzak_lab/gnn_eofm.git
+https://github.com/rwiyty/gnn_eofm.git
 ```
 navigate to ../your_path_to/gnn_eofm
 ```
@@ -92,7 +92,7 @@ Yuyang Wang yw3158@rit.edu or Michael Zuzak mjzeec@rit.edu | Department of Compu
 
 Tool utilized to produce ground truth and certain features (credit to Thomas Wojtal):
 ```
-git@kgcoe-git.rit.edu:zuzak_lab/adjoining-gate.git
+https://github.com/twojtal/Adjoining-Gate.git
 ```
 
 Additional relavent toolkits and citations
