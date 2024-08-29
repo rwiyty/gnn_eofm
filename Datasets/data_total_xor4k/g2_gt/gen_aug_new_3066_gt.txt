@@ -1,0 +1,288 @@
+UC Berkeley, ABC 1.01 (compiled Jan 25 2024 13:39:36)
+abc 01> read_bench "./bench_gen_s_keyed_xor/gen_aug_new_3066.bench"
+abc 02> bfs -g 2
+BFS Adjacency Tags Updating...
+Adjacency tags successfully updated. Run "list" command to list network.
+abc 02> scan -g -a
+
+Launching Leakage Analysis...
+
+BFS grouping of size 2 detected. Proceeding with group scan...
+Set Number of Keys considered to: 7
+
+Network List:
+Node 79:	Gate = AND,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 1	KIF = 2 	Adj. Tag = 1
+Node 80:	Gate = INV,	Visited = false,	Leaks = false,	Fanin = 1,	Fanout = 3,	Level = 1	KIF = 0 	Adj. Tag = 1
+Node 81:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 2,	Level = 1	KIF = 1 	Adj. Tag = 2
+Node 82:	Gate = OR ,	Visited = true,		Leaks = false,	Fanin = 3,	Fanout = 1,	Level = 1	KIF = 3 	Adj. Tag = 2
+Node 83:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 2,	Level = 1	KIF = 1 	Adj. Tag = 3
+Node 84:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 2,	Level = 1	KIF = 1 	Adj. Tag = 3
+Node 85:	Gate = INV,	Visited = false,	Leaks = false,	Fanin = 1,	Fanout = 2,	Level = 1	KIF = 0 	Adj. Tag = 4
+Node 86:	Gate = INV,	Visited = false,	Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 0 	Adj. Tag = 4
+Node 87:	Gate = AND,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 2,	Level = 1	KIF = 1 	Adj. Tag = 5
+Node 88:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 1 	Adj. Tag = 5
+Node 89:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 2,	Level = 1	KIF = 1 	Adj. Tag = 6
+Node 90:	Gate = INV,	Visited = false,	Leaks = false,	Fanin = 1,	Fanout = 4,	Level = 1	KIF = 0 	Adj. Tag = 6
+Node 91:	Gate = INV,	Visited = false,	Leaks = false,	Fanin = 1,	Fanout = 3,	Level = 1	KIF = 0 	Adj. Tag = 7
+Node 92:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 2,	Level = 1	KIF = 1 	Adj. Tag = 7
+Node 93:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 2,	Level = 1	KIF = 1 	Adj. Tag = 8
+Node 94:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 2,	Level = 1	KIF = 1 	Adj. Tag = 8
+Node 95:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 4,	Level = 1	KIF = 1 	Adj. Tag = 9
+Node 96:	Gate = AND,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 5,	Level = 1	KIF = 2 	Adj. Tag = 9
+Node 97:	Gate = XOR,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 2,	Level = 1	KIF = 1 	Adj. Tag = 10
+Node 98:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 3,	Level = 1	KIF = 1 	Adj. Tag = 10
+Node 99:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 2,	Level = 1	KIF = 1 	Adj. Tag = 11
+Node 100:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 3,	Level = 1	KIF = 1 	Adj. Tag = 11
+Node 101:	Gate = XOR,	Visited = false,	Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 1	KIF = 0 	Adj. Tag = 12
+Node 102:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 2,	Level = 1	KIF = 1 	Adj. Tag = 12
+Node 103:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 3,	Level = 1	KIF = 1 	Adj. Tag = 13
+Node 104:	Gate = INV,	Visited = false,	Leaks = false,	Fanin = 1,	Fanout = 3,	Level = 1	KIF = 0 	Adj. Tag = 13
+Node 105:	Gate = OR ,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 1	KIF = 1 	Adj. Tag = 14
+Node 106:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 2,	Level = 1	KIF = 1 	Adj. Tag = 14
+Node 107:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 3,	Level = 1	KIF = 1 	Adj. Tag = 15
+Node 108:	Gate = XOR,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 1	KIF = 2 	Adj. Tag = 15
+Node 109:	Gate = XOR,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 1	KIF = 2 	Adj. Tag = 16
+Node 110:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 1 	Adj. Tag = 16
+Node 111:	Gate = OR ,	Visited = true,		Leaks = false,	Fanin = 3,	Fanout = 2,	Level = 1	KIF = 3 	Adj. Tag = 17
+Node 112:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 3,	Level = 1	KIF = 1 	Adj. Tag = 17
+Node 113:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 4,	Level = 1	KIF = 1 	Adj. Tag = 18
+Node 114:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 2,	Level = 1	KIF = 1 	Adj. Tag = 18
+Node 115:	Gate = AND,	Visited = true,		Leaks = false,	Fanin = 3,	Fanout = 4,	Level = 1	KIF = 2 	Adj. Tag = 19
+Node 116:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 1 	Adj. Tag = 19
+Node 117:	Gate = OR ,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 1	KIF = 1 	Adj. Tag = 20
+Node 118:	Gate = XOR,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 1	KIF = 2 	Adj. Tag = 20
+Node 119:	Gate = INV,	Visited = false,	Leaks = false,	Fanin = 1,	Fanout = 2,	Level = 1	KIF = 0 	Adj. Tag = 21
+Node 120:	Gate = XOR,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 2,	Level = 1	KIF = 2 	Adj. Tag = 21
+Node 121:	Gate = AND,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 5,	Level = 1	KIF = 1 	Adj. Tag = 22
+Node 122:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 1 	Adj. Tag = 22
+Node 123:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 4,	Level = 1	KIF = 1 	Adj. Tag = 23
+Node 124:	Gate = AND,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 4,	Level = 1	KIF = 2 	Adj. Tag = 23
+Node 125:	Gate = OR ,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 2,	Level = 1	KIF = 2 	Adj. Tag = 24
+Node 126:	Gate = OR ,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 3,	Level = 1	KIF = 2 	Adj. Tag = 24
+Node 129:	Gate = AND,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 2,	Level = 1	KIF = 2 	Adj. Tag = 25
+Node 130:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 2,	Level = 1	KIF = 1 	Adj. Tag = 25
+Node 133:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 2,	Level = 1	KIF = 1 	Adj. Tag = 26
+Node 135:	Gate = INV,	Visited = false,	Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 0 	Adj. Tag = 26
+Node 136:	Gate = INV,	Visited = false,	Leaks = false,	Fanin = 1,	Fanout = 2,	Level = 1	KIF = 0 	Adj. Tag = 27
+Node 138:	Gate = XOR,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 1	KIF = 1 	Adj. Tag = 27
+Node 142:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 1 	Adj. Tag = 28
+Node 143:	Gate = XOR,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 2,	Level = 1	KIF = 2 	Adj. Tag = 28
+Node 144:	Gate = AND,	Visited = true,		Leaks = false,	Fanin = 3,	Fanout = 1,	Level = 1	KIF = 3 	Adj. Tag = 29
+Node 145:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 1 	Adj. Tag = 29
+Node 146:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 4,	Level = 1	KIF = 1 	Adj. Tag = 30
+Node 148:	Gate = INV,	Visited = false,	Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 0 	Adj. Tag = 30
+Node 149:	Gate = INV,	Visited = false,	Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 0 	Adj. Tag = 31
+Node 151:	Gate = XOR,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 2,	Level = 1	KIF = 2 	Adj. Tag = 31
+Node 152:	Gate = INV,	Visited = false,	Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 0 	Adj. Tag = 32
+Node 157:	Gate = OR ,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 2,	Level = 1	KIF = 2 	Adj. Tag = 32
+Node 158:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 2,	Level = 1	KIF = 1 	Adj. Tag = 33
+Node 161:	Gate = INV,	Visited = false,	Leaks = false,	Fanin = 1,	Fanout = 2,	Level = 1	KIF = 0 	Adj. Tag = 33
+Node 163:	Gate = AND,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 2,	Level = 1	KIF = 2 	Adj. Tag = 34
+Node 167:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 4,	Level = 1	KIF = 1 	Adj. Tag = 34
+Node 170:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 1 	Adj. Tag = 35
+Node 172:	Gate = OR ,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 1	KIF = 1 	Adj. Tag = 35
+Node 177:	Gate = AND,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 1	KIF = 2 	Adj. Tag = 36
+Node 183:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 1 	Adj. Tag = 36
+Node 190:	Gate = INV,	Visited = false,	Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 0 	Adj. Tag = 37
+Node 196:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 1 	Adj. Tag = 37
+Node 198:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 1 	Adj. Tag = 38
+Node 204:	Gate = AND,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 1	KIF = 2 	Adj. Tag = 38
+Node 206:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 1 	Adj. Tag = 39
+Node 210:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 1 	Adj. Tag = 39
+Node 213:	Gate = AND,	Visited = false,	Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 1	KIF = 0 	Adj. Tag = 40
+Node 222:	Gate = INV,	Visited = false,	Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 0 	Adj. Tag = 40
+Node 224:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 1 	Adj. Tag = 41
+Node 228:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 1 	Adj. Tag = 41
+Node 236:	Gate = INV,	Visited = false,	Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 0 	Adj. Tag = 42
+Node 237:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 1 	Adj. Tag = 42
+Node 242:	Gate = INV,	Visited = false,	Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 0 	Adj. Tag = 43
+Node 243:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 1 	Adj. Tag = 43
+Node 246:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 1 	Adj. Tag = 44
+Node 260:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 1 	Adj. Tag = 44
+Node 264:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 1 	Adj. Tag = 45
+Node 270:	Gate = INV,	Visited = false,	Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 0 	Adj. Tag = 45
+Node 272:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 1 	Adj. Tag = 46
+Node 276:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 1 	Adj. Tag = 46
+Node 127:	Gate = INV,	Visited = false,	Leaks = false,	Fanin = 1,	Fanout = 4,	Level = 2	KIF = 0 	Adj. Tag = 47
+Node 287:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 1	KIF = 1 	Adj. Tag = 47
+Node 128:	Gate = XOR,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 4 	Adj. Tag = 48
+Node 131:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 48
+Node 132:	Gate = XOR,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 2 	Adj. Tag = 49
+Node 134:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 2,	Level = 2	KIF = 2 	Adj. Tag = 49
+Node 137:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 50
+Node 139:	Gate = OR ,	Visited = false,	Leaks = false,	Fanin = 2,	Fanout = 2,	Level = 2	KIF = 0 	Adj. Tag = 50
+Node 140:	Gate = INV,	Visited = false,	Leaks = false,	Fanin = 1,	Fanout = 2,	Level = 2	KIF = 0 	Adj. Tag = 51
+Node 141:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 2,	Level = 2	KIF = 1 	Adj. Tag = 51
+Node 147:	Gate = XOR,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 52
+Node 150:	Gate = INV,	Visited = false,	Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 0 	Adj. Tag = 52
+Node 153:	Gate = AND,	Visited = true,		Leaks = false,	Fanin = 3,	Fanout = 1,	Level = 2	KIF = 2 	Adj. Tag = 53
+Node 154:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 53
+Node 155:	Gate = AND,	Visited = true,		Leaks = true,	Fanin = 2,	Fanout = 2,	Level = 2	KIF = 1 	Adj. Tag = 54
+Node 156:	Gate = AND,	Visited = true,		Leaks = true,	Fanin = 2,	Fanout = 2,	Level = 2	KIF = 1 	Adj. Tag = 54
+Node 159:	Gate = AND,	Visited = true,		Leaks = true,	Fanin = 2,	Fanout = 2,	Level = 2	KIF = 2 	Adj. Tag = 55
+Node 160:	Gate = XOR,	Visited = true,		Leaks = true,	Fanin = 2,	Fanout = 2,	Level = 2	KIF = 2 	Adj. Tag = 55
+Node 162:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 2 	Adj. Tag = 56
+Node 164:	Gate = OR ,	Visited = true,		Leaks = false,	Fanin = 3,	Fanout = 3,	Level = 2	KIF = 3 	Adj. Tag = 56
+Node 165:	Gate = OR ,	Visited = true,		Leaks = false,	Fanin = 4,	Fanout = 1,	Level = 2	KIF = 4 	Adj. Tag = 57
+Node 166:	Gate = XOR,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 2 	Adj. Tag = 57
+Node 168:	Gate = INV,	Visited = true,		Leaks = true,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 58
+Node 169:	Gate = AND,	Visited = true,		Leaks = true,	Fanin = 4,	Fanout = 2,	Level = 2	KIF = 4 	Adj. Tag = 58
+Node 171:	Gate = XOR,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 2 	Adj. Tag = 59
+Node 173:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 2 	Adj. Tag = 59
+Node 174:	Gate = AND,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 60
+Node 176:	Gate = AND,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 2 	Adj. Tag = 60
+Node 182:	Gate = AND,	Visited = true,		Leaks = true,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 3 	Adj. Tag = 61
+Node 185:	Gate = INV,	Visited = true,		Leaks = true,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 61
+Node 186:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 2 	Adj. Tag = 62
+Node 187:	Gate = AND,	Visited = true,		Leaks = false,	Fanin = 3,	Fanout = 1,	Level = 2	KIF = 2 	Adj. Tag = 62
+Node 191:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 63
+Node 192:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 63
+Node 193:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 64
+Node 194:	Gate = INV,	Visited = false,	Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 0 	Adj. Tag = 64
+Node 195:	Gate = INV,	Visited = true,		Leaks = true,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 2 	Adj. Tag = 65
+Node 197:	Gate = INV,	Visited = true,		Leaks = true,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 2 	Adj. Tag = 65
+Node 200:	Gate = XOR,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 66
+Node 201:	Gate = AND,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 3 	Adj. Tag = 66
+Node 202:	Gate = XOR,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 3 	Adj. Tag = 67
+Node 203:	Gate = AND,	Visited = true,		Leaks = false,	Fanin = 3,	Fanout = 1,	Level = 2	KIF = 3 	Adj. Tag = 67
+Node 205:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 68
+Node 207:	Gate = AND,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 68
+Node 209:	Gate = XOR,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 2 	Adj. Tag = 69
+Node 211:	Gate = AND,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 2 	Adj. Tag = 69
+Node 212:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 70
+Node 214:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 2 	Adj. Tag = 70
+Node 215:	Gate = XOR,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 2 	Adj. Tag = 71
+Node 218:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 71
+Node 221:	Gate = XOR,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 2 	Adj. Tag = 72
+Node 223:	Gate = OR ,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 2 	Adj. Tag = 72
+Node 225:	Gate = XOR,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 73
+Node 226:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 73
+Node 227:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 74
+Node 230:	Gate = AND,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 3 	Adj. Tag = 74
+Node 231:	Gate = INV,	Visited = true,		Leaks = true,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 75
+Node 232:	Gate = INV,	Visited = true,		Leaks = true,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 75
+Node 233:	Gate = OR ,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 2 	Adj. Tag = 76
+Node 234:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 2 	Adj. Tag = 76
+Node 239:	Gate = AND,	Visited = true,		Leaks = true,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 4 	Adj. Tag = 77
+Node 241:	Gate = INV,	Visited = true,		Leaks = true,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 77
+Node 244:	Gate = XOR,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 2 	Adj. Tag = 78
+Node 245:	Gate = AND,	Visited = true,		Leaks = false,	Fanin = 3,	Fanout = 1,	Level = 2	KIF = 4 	Adj. Tag = 78
+Node 247:	Gate = AND,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 2 	Adj. Tag = 79
+Node 248:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 2 	Adj. Tag = 79
+Node 249:	Gate = XOR,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 80
+Node 251:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 2 	Adj. Tag = 80
+Node 252:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 81
+Node 253:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 3 	Adj. Tag = 81
+Node 254:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 2 	Adj. Tag = 82
+Node 257:	Gate = AND,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 82
+Node 258:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 83
+Node 259:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 83
+Node 261:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 2 	Adj. Tag = 84
+Node 262:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 84
+Node 263:	Gate = OR ,	Visited = true,		Leaks = false,	Fanin = 3,	Fanout = 1,	Level = 2	KIF = 5 	Adj. Tag = 85
+Node 266:	Gate = OR ,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 85
+Node 267:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 86
+Node 269:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 86
+Node 277:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 2 	Adj. Tag = 87
+Node 284:	Gate = INV,	Visited = false,	Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 0 	Adj. Tag = 87
+Node 298:	Gate = AND,	Visited = true,		Leaks = true,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 2 	Adj. Tag = 88
+Node 303:	Gate = INV,	Visited = true,		Leaks = true,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 88
+Node 304:	Gate = OR ,	Visited = false,	Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 0 	Adj. Tag = 89
+Node 311:	Gate = XOR,	Visited = false,	Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 0 	Adj. Tag = 89
+Node 315:	Gate = AND,	Visited = true,		Leaks = false,	Fanin = 3,	Fanout = 1,	Level = 2	KIF = 4 	Adj. Tag = 90
+Node 321:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 90
+Node 328:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 91
+Node 329:	Gate = OR ,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 2	KIF = 1 	Adj. Tag = 91
+Node 330:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 2	KIF = 2 	Adj. Tag = 92
+Node 339:	Gate = OR ,	Visited = true,		Leaks = false,	Fanin = 3,	Fanout = 1,	Level = 2	KIF = 2 	Adj. Tag = 92
+Node 175:	Gate = OR ,	Visited = true,		Leaks = true,	Fanin = 2,	Fanout = 1,	Level = 3	KIF = 3 	Adj. Tag = 93
+Node 178:	Gate = OR ,	Visited = true,		Leaks = true,	Fanin = 2,	Fanout = 1,	Level = 3	KIF = 1 	Adj. Tag = 93
+Node 179:	Gate = OR ,	Visited = true,		Leaks = true,	Fanin = 2,	Fanout = 1,	Level = 3	KIF = 4 	Adj. Tag = 94
+Node 180:	Gate = INV,	Visited = true,		Leaks = true,	Fanin = 1,	Fanout = 1,	Level = 3	KIF = 1 	Adj. Tag = 94
+Node 181:	Gate = OR ,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 3	KIF = 2 	Adj. Tag = 95
+Node 184:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 3	KIF = 1 	Adj. Tag = 95
+Node 188:	Gate = OR ,	Visited = false,	Leaks = false,	Fanin = 3,	Fanout = 1,	Level = 3	KIF = 4 	Adj. Tag = 96
+Node 189:	Gate = AND,	Visited = false,	Leaks = false,	Fanin = 3,	Fanout = 1,	Level = 3	KIF = 6 	Adj. Tag = 96
+Node 199:	Gate = XOR,	Visited = true,		Leaks = true,	Fanin = 2,	Fanout = 1,	Level = 3	KIF = 2 	Adj. Tag = 97
+Node 208:	Gate = INV,	Visited = false,	Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 3	KIF = 0 	Adj. Tag = 97
+Node 216:	Gate = INV,	Visited = false,	Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 3	KIF = 0 	Adj. Tag = 98
+Node 217:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 3	KIF = 2 	Adj. Tag = 98
+Node 219:	Gate = OR ,	Visited = false,	Leaks = false,	Fanin = 4,	Fanout = 1,	Level = 3	KIF = 6 	Adj. Tag = 99
+Node 220:	Gate = AND,	Visited = false,	Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 3	KIF = 4 	Adj. Tag = 99
+Node 229:	Gate = AND,	Visited = true,		Leaks = true,	Fanin = 3,	Fanout = 1,	Level = 3	KIF = 3 	Adj. Tag = 100
+Node 235:	Gate = AND,	Visited = true,		Leaks = true,	Fanin = 4,	Fanout = 1,	Level = 3	KIF = 3 	Adj. Tag = 100
+Node 238:	Gate = OR ,	Visited = true,		Leaks = true,	Fanin = 2,	Fanout = 1,	Level = 3	KIF = 4 	Adj. Tag = 101
+Node 240:	Gate = INV,	Visited = true,		Leaks = true,	Fanin = 1,	Fanout = 1,	Level = 3	KIF = 2 	Adj. Tag = 101
+Node 250:	Gate = AND,	Visited = true,		Leaks = false,	Fanin = 3,	Fanout = 1,	Level = 3	KIF = 2 	Adj. Tag = 102
+Node 255:	Gate = AND,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 2,	Level = 3	KIF = 3 	Adj. Tag = 102
+Node 256:	Gate = INV,	Visited = true,		Leaks = true,	Fanin = 1,	Fanout = 1,	Level = 3	KIF = 4 	Adj. Tag = 103
+Node 265:	Gate = OR ,	Visited = true,		Leaks = true,	Fanin = 2,	Fanout = 1,	Level = 3	KIF = 1 	Adj. Tag = 103
+Node 268:	Gate = OR ,	Visited = true,		Leaks = false,	Fanin = 3,	Fanout = 1,	Level = 3	KIF = 2 	Adj. Tag = 104
+Node 271:	Gate = INV,	Visited = true,		Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 3	KIF = 3 	Adj. Tag = 104
+Node 274:	Gate = INV,	Visited = true,		Leaks = true,	Fanin = 1,	Fanout = 1,	Level = 3	KIF = 2 	Adj. Tag = 105
+Node 278:	Gate = OR ,	Visited = true,		Leaks = true,	Fanin = 2,	Fanout = 1,	Level = 3	KIF = 2 	Adj. Tag = 105
+Node 280:	Gate = XOR,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 3	KIF = 3 	Adj. Tag = 106
+Node 282:	Gate = OR ,	Visited = true,		Leaks = false,	Fanin = 3,	Fanout = 1,	Level = 3	KIF = 2 	Adj. Tag = 106
+Node 283:	Gate = OR ,	Visited = false,	Leaks = false,	Fanin = 3,	Fanout = 1,	Level = 3	KIF = 4 	Adj. Tag = 107
+Node 285:	Gate = OR ,	Visited = false,	Leaks = false,	Fanin = 3,	Fanout = 1,	Level = 3	KIF = 5 	Adj. Tag = 107
+Node 288:	Gate = INV,	Visited = true,		Leaks = true,	Fanin = 1,	Fanout = 1,	Level = 3	KIF = 2 	Adj. Tag = 108
+Node 291:	Gate = OR ,	Visited = true,		Leaks = true,	Fanin = 3,	Fanout = 1,	Level = 3	KIF = 5 	Adj. Tag = 108
+Node 292:	Gate = AND,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 3	KIF = 6 	Adj. Tag = 109
+Node 295:	Gate = OR ,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 3	KIF = 2 	Adj. Tag = 109
+Node 299:	Gate = AND,	Visited = false,	Leaks = false,	Fanin = 3,	Fanout = 1,	Level = 3	KIF = 6 	Adj. Tag = 110
+Node 300:	Gate = OR ,	Visited = false,	Leaks = false,	Fanin = 3,	Fanout = 1,	Level = 3	KIF = 2 	Adj. Tag = 110
+Node 301:	Gate = OR ,	Visited = true,		Leaks = false,	Fanin = 4,	Fanout = 1,	Level = 3	KIF = 3 	Adj. Tag = 111
+Node 302:	Gate = AND,	Visited = true,		Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 3	KIF = 2 	Adj. Tag = 111
+Node 307:	Gate = OR ,	Visited = false,	Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 3	KIF = 3 	Adj. Tag = 112
+Node 309:	Gate = AND,	Visited = false,	Leaks = false,	Fanin = 4,	Fanout = 1,	Level = 3	KIF = 5 	Adj. Tag = 112
+Node 310:	Gate = INV,	Visited = true,		Leaks = true,	Fanin = 1,	Fanout = 1,	Level = 3	KIF = 1 	Adj. Tag = 113
+Node 312:	Gate = XOR,	Visited = true,		Leaks = true,	Fanin = 2,	Fanout = 1,	Level = 3	KIF = 1 	Adj. Tag = 113
+Node 314:	Gate = AND,	Visited = false,	Leaks = false,	Fanin = 4,	Fanout = 1,	Level = 3	KIF = 10 	Adj. Tag = 114
+Node 316:	Gate = OR ,	Visited = false,	Leaks = false,	Fanin = 4,	Fanout = 1,	Level = 3	KIF = 2 	Adj. Tag = 114
+Node 317:	Gate = OR ,	Visited = false,	Leaks = false,	Fanin = 3,	Fanout = 1,	Level = 3	KIF = 3 	Adj. Tag = 115
+Node 318:	Gate = AND,	Visited = false,	Leaks = false,	Fanin = 3,	Fanout = 1,	Level = 3	KIF = 5 	Adj. Tag = 115
+Node 319:	Gate = XOR,	Visited = true,		Leaks = true,	Fanin = 2,	Fanout = 1,	Level = 3	KIF = 2 	Adj. Tag = 116
+Node 322:	Gate = AND,	Visited = true,		Leaks = true,	Fanin = 4,	Fanout = 1,	Level = 3	KIF = 5 	Adj. Tag = 116
+Node 323:	Gate = AND,	Visited = true,		Leaks = true,	Fanin = 2,	Fanout = 1,	Level = 3	KIF = 2 	Adj. Tag = 117
+Node 324:	Gate = AND,	Visited = true,		Leaks = true,	Fanin = 4,	Fanout = 1,	Level = 3	KIF = 4 	Adj. Tag = 117
+Node 325:	Gate = OR ,	Visited = true,		Leaks = true,	Fanin = 2,	Fanout = 1,	Level = 3	KIF = 2 	Adj. Tag = 118
+Node 326:	Gate = OR ,	Visited = true,		Leaks = true,	Fanin = 2,	Fanout = 1,	Level = 3	KIF = 2 	Adj. Tag = 118
+Node 333:	Gate = OR ,	Visited = true,		Leaks = true,	Fanin = 2,	Fanout = 1,	Level = 3	KIF = 6 	Adj. Tag = 119
+Node 334:	Gate = INV,	Visited = true,		Leaks = true,	Fanin = 1,	Fanout = 1,	Level = 3	KIF = 3 	Adj. Tag = 119
+Node 273:	Gate = OR ,	Visited = true,		Leaks = true,	Fanin = 4,	Fanout = 1,	Level = 4	KIF = 4 	Adj. Tag = 120
+Node 335:	Gate = AND,	Visited = true,		Leaks = true,	Fanin = 3,	Fanout = 1,	Level = 3	KIF = 3 	Adj. Tag = 120
+Node 275:	Gate = AND,	Visited = false,	Leaks = false,	Fanin = 3,	Fanout = 1,	Level = 4	KIF = 4 	Adj. Tag = 121
+Node 279:	Gate = AND,	Visited = false,	Leaks = false,	Fanin = 3,	Fanout = 1,	Level = 4	KIF = 6 	Adj. Tag = 121
+Node 281:	Gate = AND,	Visited = true,		Leaks = true,	Fanin = 3,	Fanout = 1,	Level = 4	KIF = 5 	Adj. Tag = 122
+Node 286:	Gate = OR ,	Visited = true,		Leaks = true,	Fanin = 3,	Fanout = 1,	Level = 4	KIF = 3 	Adj. Tag = 122
+Node 289:	Gate = AND,	Visited = false,	Leaks = false,	Fanin = 4,	Fanout = 1,	Level = 4	KIF = 8 	Adj. Tag = 123
+Node 290:	Gate = OR ,	Visited = false,	Leaks = false,	Fanin = 2,	Fanout = 1,	Level = 4	KIF = 4 	Adj. Tag = 123
+Node 293:	Gate = AND,	Visited = false,	Leaks = false,	Fanin = 4,	Fanout = 1,	Level = 4	KIF = 4 	Adj. Tag = 124
+Node 294:	Gate = AND,	Visited = false,	Leaks = false,	Fanin = 4,	Fanout = 1,	Level = 4	KIF = 8 	Adj. Tag = 124
+Node 296:	Gate = OR ,	Visited = false,	Leaks = false,	Fanin = 3,	Fanout = 1,	Level = 4	KIF = 4 	Adj. Tag = 125
+Node 297:	Gate = OR ,	Visited = false,	Leaks = false,	Fanin = 4,	Fanout = 1,	Level = 4	KIF = 5 	Adj. Tag = 125
+Node 305:	Gate = OR ,	Visited = true,		Leaks = true,	Fanin = 3,	Fanout = 1,	Level = 4	KIF = 4 	Adj. Tag = 126
+Node 306:	Gate = AND,	Visited = true,		Leaks = true,	Fanin = 2,	Fanout = 1,	Level = 4	KIF = 3 	Adj. Tag = 126
+Node 308:	Gate = INV,	Visited = false,	Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 4	KIF = 3 	Adj. Tag = 127
+Node 313:	Gate = OR ,	Visited = false,	Leaks = false,	Fanin = 3,	Fanout = 1,	Level = 4	KIF = 6 	Adj. Tag = 127
+Node 320:	Gate = AND,	Visited = false,	Leaks = false,	Fanin = 4,	Fanout = 1,	Level = 4	KIF = 6 	Adj. Tag = 128
+Node 327:	Gate = AND,	Visited = false,	Leaks = false,	Fanin = 4,	Fanout = 1,	Level = 4	KIF = 12 	Adj. Tag = 128
+Node 331:	Gate = INV,	Visited = false,	Leaks = false,	Fanin = 1,	Fanout = 1,	Level = 4	KIF = 4 	Adj. Tag = 129
+Node 332:	Gate = OR ,	Visited = true,		Leaks = false,	Fanin = 3,	Fanout = 1,	Level = 4	KIF = 2 	Adj. Tag = 129
+Node 336:	Gate = OR ,	Visited = false,	Leaks = false,	Fanin = 4,	Fanout = 1,	Level = 4	KIF = 9 	Adj. Tag = 130
+Node 337:	Gate = AND,	Visited = false,	Leaks = false,	Fanin = 3,	Fanout = 1,	Level = 4	KIF = 5 	Adj. Tag = 130
+Node 338:	Gate = AND,	Visited = true,		Leaks = true,	Fanin = 3,	Fanout = 1,	Level = 4	KIF = 7 	Adj. Tag = 131
+
+Scan Time: 0.178814
+PIs: 78
+POs: 67
+Total nodes in circuit: 261
+Nodes visited: 202
+Nodes leaking key information: 48
+abc 02> run
+
+Added adjoining gates to 48 nodes
+Adjoining Gate Add Runtime: 0.002064
+Final PIs: 78
+Final POs: 115
+abc 02> quit
