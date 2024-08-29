@@ -5,7 +5,7 @@
 # Description
 This project aims to reduce the runtime of leakage estimation compared to traditional algorithmic approaches, which rely on repeatedly solving a Boolean satisfiability problem with exponential time complexity.
 
-**Key Words and Phrases：** `hardware security` `graph neural networks` `data augmentation` `combinational circuits` `side-channel analysis and countermeasures` `Logic locking` `electro-optical frequency mapping` `untrusted foundry`
+**Key Words and Phrases：** `Hardware attacks and countermeasures` `Hardware reverse engineering` `Graph Neural Networks` `Logic Locking` `Electro-Optical Frequency Mapping` `Untrusted Foundry` 
 
 # Abstract
 This work introduces a novel approach to assess Electro-Optical Frequency Mapping key information leakage in Integrated Circuit (IC)
