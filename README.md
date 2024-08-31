@@ -120,7 +120,7 @@ python train_GNN.py --n 5 --lr 0.05 --w 5 --o model_x.pth
 >
 > `--tsv TSV`   Test feature folder path (assumes the current path) [default: `None`]
 
-*the training set (in the train_ex folder) is just the CLAP set for demo purpose, for actual trianing please replace the content or use CLI command to redirect the training folder path.
+*Within the example train_ex folder is just the CLAP set for demo purpose, for actual trianing please replace the content or use CLI command to redirect the training folder path.
 
 
 ## Future work
