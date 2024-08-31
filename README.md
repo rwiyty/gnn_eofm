@@ -80,34 +80,46 @@ navigate to ../your_path_to/gnn_eofm
 ```
 python GNN_EOFM.py --f demo_bench --m wBest15_model_auto2kT7.pth
 ```
-> -h, --help  show this help message and exit
+> `-h, --help`  Show this help message and exit
 >
-> --f F       Folder name containing the dataset and features. Assumes the current path.
+> `--f F`       Folder name containing the dataset and features. Assumes the current path.
 >
-> --m M       Name of the best model file (e.g., wBest15_model_auto2kT7.pth).
-
->  `-h, --help`  Show this help message and exit
->  `--f F`       Folder name containing the dataset and features. Assumes the current path.
->  `--m M`       Name of the best model file (e.g., `wBest15_model_auto2kT7.pth`).
+> `--m M`       Name of the best model file (e.g., `wBest15_model_auto2kT7.pth`).
 
 **Training a model (example):**
 ```
 python train_GNN.py --n 5 --lr 0.05 --w 5 --o model_x.pth
 ```
-> -h, --help  show this help message and exit
-> --dr DR     Dropout rate [default: 0.3]
-> --lr LR     Learning rate [default: 0.00005]
-> --wd WD     Weight decay [default: 1e-6]
-> --b B       Batch size [default: 16]
-> --n N       Number of Epochs [default: 300]
-> --w W       Weight on the positive class [default: 15]
-> --h H       Hidden size [default: 64]
-> --m M       Model type - 'sage' and 'conv' - for GraphSAGE (recommand GPU) and Graph convolution layer (CPU) type [default: sage]
-> --ag AG     Aggregation function - 'mean' and 'pool' - for GraphSAGE layer type only [default: mean]
-> --o O       The output model name: 'name + .pth' [default: model_out.pth]
-> --tr TR     Training data folder path (assumes the current path) [default: train_ex]
-> --trv TRV   Training feature folder path (assumes the current path) [default: train_ex/g2_gt]
-> --tsv TSV   Test feature folder path (assumes the current path) [default: None]
+> `-h, --help`  show this help message and exit
+>
+> `--dr DR`     Dropout rate [default: `0.3`]
+>
+> `--lr LR`     Learning rate [default: `0.00005`]
+>
+> `--wd WD`     Weight decay [default: `1e-6`]
+>
+> `--b B`       Batch size [default: `16`]
+>
+> `--n N`       Number of Epochs [default: `300`]
+>
+> `--w W`       Weight on the positive class [default: `15`]
+>
+> `--h H`       Hidden size [default: `64`]
+>
+> `--m M`       Model type - `sage` and `conv` - for GraphSAGE (recommand GPU) and Graph convolution layer (CPU) type [default: `sage`]
+>
+> `--ag AG`     Aggregation function - `mean` and `pool` - for GraphSAGE layer type only [default: `mean`]
+>
+> `--o O`       The output model name: `name + .pth` [default: `model_out.pth`]
+>
+> `--tr TR`     Training data folder path (assumes the current path) [default: `train_ex`]
+>
+> `--ts TS`     Test data folder path (assumes the current path, if left emptywill be split from the training data 80-10-10) [default: `None`]
+>
+> `--trv TRV`   Training feature folder path (assumes the current path) [default: `train_ex/g2_gt`]
+>
+> `--tsv TSV`   Test feature folder path (assumes the current path) [default: `None`]
+
 *the training set (in the train_ex folder) is just the CLAP set for demo purpose, for actual trianing please replace the content or use CLI command to redirect the training folder path.
 
 
