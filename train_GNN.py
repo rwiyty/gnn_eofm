@@ -14,7 +14,27 @@ import torch.nn as nn
 import torch.optim as optim
 import torch_geometric.transforms as T
 from torch.utils.data import DataLoader, Subset
+import argparse
 from features_label import GNNSage, GNNConv, BenchGraphDataset, AddNoiseToFeatures, collate
+
+# Argument parsing
+parser = argparse.ArgumentParser(description='Train a GNN model.')
+parser.add_argument('--dr', type=float, default=0.3, help="Dropout rate [default: 0.3]")
+parser.add_argument('--lr', type=float, default=0.00005, help="Learning rate [default: 0.00005]")
+parser.add_argument('--wd', type=float, default=1e-6, help="Weight decay [default: 1e-6]")
+parser.add_argument('--b', type=int, default=16, help="Batch size [default: 16]")
+parser.add_argument('--n', type=int, default=300, help="Number of Epochs [default: 300]")
+parser.add_argument('--w', type=int, default=15, help="Weight on the positive class [default: 15]")
+parser.add_argument('--h', type=int, default=64, help="Hidden size [default: 64]")
+parser.add_argument('--m', type=str, default='sage', help="Model type - 'sage' and 'conv' - for GraphSAGE (recommand GPU) and Graph convolution layer (CPU) type [default: sage]")
+parser.add_argument('--ag', type=str, default='mean', help="Aggregation function - 'mean' and 'pool' - for GraphSAGE layer type only [default: mean]")
+
+parser.add_argument('--o', type=str, default='model_out.pth', help="The output model name: 'name + .pth' [default: model_out.pth]")
+parser.add_argument('--tr', type=str, default='train_ex', help="Training data folder path (assumes the current path) [default: train_ex]")
+parser.add_argument('--ts', type=str, default=None, help="Test data folder path (assumes the current path, if left empty will be split from the training data 80-10-10) [default: None]")
+parser.add_argument('--trv', type=str, default='train_ex/g2_gt', help="Training feature folder path (assumes the current path) [default: train_ex/g2_gt]")
+parser.add_argument('--tsv', type=str, default=None, help="Test feature folder path (assumes the current path) [default: None]")
+args = parser.parse_args()
 
 TORCH_DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 TORCH_DTYPE = torch.float32
@@ -28,15 +48,22 @@ See below in dataloading section for splitting test set instead
 '''
 
 # path to the dataset and ground truth + feature directory
-bench_dir = os.path.join(current_path, 'data_total')
-feature_dir = os.path.join(current_path, 'data_total/gt_g2')
+bench_dir = os.path.join(current_path, args.tr)
+if(args.trv != None):
+    feature_dir = os.path.join(current_path, args.trv)
+else:
+    feature_dir = bench_dir
 
-# path to the dataset and ground truth + feature directory for test set
-test_dir = os.path.join(current_path, 'test_set')
-test_feature_dir = os.path.join(current_path, 'test_set/test_gt_g2')
+if(args.ts != None):
+    # path to the dataset and ground truth + feature directory for test set
+    test_dir = os.path.join(current_path, args.ts)
+    if(args.tsv != None):
+        test_feature_dir = os.path.join(current_path, args.tsv)
+    else:
+        test_feature_dir = test_dir
 
 # path to the best model
-best_model_path = os.path.join(current_path, 'best_model.pth')
+best_model_path = os.path.join(current_path, args.o)
 
 ################## parameters ##########################
 '''
@@ -53,16 +80,16 @@ Parameters setting section description:
 - num_epoch : number of training epoch, adjust as needed : int
 - positive_weight : weight on the positive examples, adjust as needed : int/float
 '''
-model_type = 'sage'
 in_feat = 9
-hidden_size = 64
-dropout = 0.3
-batch_size = 16
-aggregation_function = 'mean'
-lr = 0.00005
-weight_decay_value = 1e-6
-num_epochs = 300
-positive_weight = 15
+model_type = args.m
+hidden_size = args.h
+dropout = args.dr
+batch_size = args.b
+aggregation_function = args.ag
+lr = args.lr
+weight_decay_value = args.wd
+num_epochs = args.n
+positive_weight = args.w
 
 ################## start of main ##########################
 '''
@@ -95,18 +122,19 @@ np.random.seed(42)
 
 total_size = len(dataset)
 train_ratio = 0.8
-val_ratio = 1 - train_ratio
 
-# If you are not using a designated test set *UNCOMMENT* the following code and *COMMENT OUT* the val ratio above
-#val_ratio = 0.1
-# test_ratio = 1 - train_ratio - val_ratio
+if args.ts == None:
+    val_ratio = 0.1
+    test_ratio = 1 - train_ratio - val_ratio
+else:
+    val_ratio = 1 - train_ratio
 
 # Calculate the size of each split
 train_size = int(train_ratio * total_size)
 val_size = int(val_ratio * total_size)
 
-# If you are not using a designated test set *UNCOMMENT* the following code
-#test_size = total_size - train_size - val_size
+if args.ts != None:
+    test_size = total_size - train_size - val_size
 
 # Generate a shuffled list of indices
 indices = torch.randperm(total_size).tolist()
@@ -114,27 +142,26 @@ indices = torch.randperm(total_size).tolist()
 # Create subsets for training, validation, and testing
 train_dataset = Subset(dataset, indices[:train_size])
 
-# If you are not using a designated test set *COMMENT OUT* the following code
-val_dataset = Subset(dataset, indices[train_size:])
-
 # Introducing feature noise
 transform = T.Compose([AddNoiseToFeatures(noise_level=0.1)])
 transformed_data = [(transform(graph), label) for graph, label in train_dataset]
 
-# If you are not using a designated test set *UNCOMMENT* the following code
-#val_dataset = Subset(dataset, indices[train_size:train_size+val_size])
-#test_dataset = Subset(dataset, indices[train_size+val_size:])
+if args.ts == None:
+    val_dataset = Subset(dataset, indices[train_size:train_size+val_size])
+    test_dataset = Subset(dataset, indices[train_size+val_size:])
+else:
+    val_dataset = Subset(dataset, indices[train_size:])
 
 # Initialize DataLoaders for each split
 train_dataloader = DataLoader(transformed_data, batch_size, shuffle=True, collate_fn=collate)
 val_dataloader = DataLoader(val_dataset, batch_size, shuffle=False, collate_fn=collate)
 
-# If you are not using a designated test set *COMMENT OUT* the following code
-test_dataset = BenchGraphDataset(test_dir, test_feature_dir)
-test_dataloader = DataLoader(test_dataset, batch_size, shuffle=False, collate_fn=collate)
+if args.ts == None:
+    test_dataloader = DataLoader(test_dataset, batch_size, shuffle=False, collate_fn=collate)
+else:
+    test_dataset = BenchGraphDataset(test_dir, test_feature_dir)
+    test_dataloader = DataLoader(test_dataset, batch_size, shuffle=False, collate_fn=collate)
 
-# If you are not using a designated test set *UNCOMMENT* the following code
-#test_dataloader = DataLoader(test_dataset, batch_size=16, shuffle=False, collate_fn=collate)
 
 print("Dataset successfully loaded!")
 

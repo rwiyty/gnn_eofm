@@ -67,18 +67,43 @@ There are several programs in this repository. Below is a quick description of e
 
 1. `clean_up_keyinput.py` includes data augment function which cleans up key inputs in benchmark circuit files with the expected format.
 2. `add_keyinputs.py` includes data augment function which adds key inputs.
-3. `train_model.py` includes an example training process.
-4. A demonstration of the model without a Command Line Interface (CLI) is provided by `demo_model_usage.py`.
+3. `train_model.py` includes an training process example , `train_GNN.py` is the same process with CLI support.
+4. `demo_model_usage.py` includes an model usage demonstration example, `GNN_EOFM.py` is the same process with CLI support.
 5. `process_log` extract relavent information and display figures from the output log from `demo_model_usage.py` for further analysis. 
-6. A demo of the model with CLI can be used as follows:
+6. Process with CLI commands support can be used as follows:
 ```
 https://github.com/rwiyty/gnn_eofm.git
 ```
 navigate to ../your_path_to/gnn_eofm
+
+**Using the Demo (example):**
 ```
 python GNN_EOFM.py --f demo_bench --m wBest15_model_auto2kT7.pth
 ```
-replace "demo_bench" and "bestwBest15_model_auto2kT7_model.pth" with your own dataset's folder name and model name if needed.
+> -h, --help  show this help message and exit
+> --f F       Folder name containing the dataset and features. Assumes the current path.
+> --m M       Name of the best model file (e.g., wBest15_model_auto2kT7.pth).
+
+**Training a model (example):**
+```
+python train_GNN.py --n 5 --lr 0.05 --w 5 --o model_x.pth
+```
+> -h, --help  show this help message and exit
+> --dr DR     Dropout rate [default: 0.3]
+> --lr LR     Learning rate [default: 0.00005]
+> --wd WD     Weight decay [default: 1e-6]
+> --b B       Batch size [default: 16]
+> --n N       Number of Epochs [default: 300]
+> --w W       Weight on the positive class [default: 15]
+> --h H       Hidden size [default: 64]
+> --m M       Model type - 'sage' and 'conv' - for GraphSAGE (recommand GPU) and Graph convolution layer (CPU) type [default: sage]
+> --ag AG     Aggregation function - 'mean' and 'pool' - for GraphSAGE layer type only [default: mean]
+> --o O       The output model name: 'name + .pth' [default: model_out.pth]
+> --tr TR     Training data folder path (assumes the current path) [default: train_ex]
+> --trv TRV   Training feature folder path (assumes the current path) [default: train_ex/g2_gt]
+> --tsv TSV   Test feature folder path (assumes the current path) [default: None]
+*the training set (in the train_ex folder) is just the CLAP set for demo purpose, for actual trianing please replace the content or use CLI command to redirect the training folder path.
+
 
 ## Future work
 The current demo model is trained specifically for gate pairings. Ideally, to enhance its applicability, separate models should be developed for each desired resolution. While the model achieves over 90% accuracy on the majority of test circuits, it tends to underperform on certain types of leakage, indicating a need for targeted improvements in these areas. Additionally, feature extraction is presently based on outputs from CLAP toolkit [1] and the adjoining-gate program, credited to Thomas Wojtal. Future iterations should include the implementation of additional feature extraction functions to fully realize the project's potential.
