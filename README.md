@@ -86,6 +86,15 @@ python GNN_EOFM.py --f demo_bench --m wBest15_model_auto2kT7.pth
 >
 > --m M       Name of the best model file (e.g., wBest15_model_auto2kT7.pth).
 
+> - `-h, --help`  
+>   Show this help message and exit
+>
+> - `--f F`  
+>   Folder name containing the dataset and features. Assumes the current path.
+>
+> - `--m M`  
+>   Name of the best model file (e.g., `wBest15_model_auto2kT7.pth`).
+
 **Training a model (example):**
 ```
 python train_GNN.py --n 5 --lr 0.05 --w 5 --o model_x.pth
